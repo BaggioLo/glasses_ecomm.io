@@ -1,0 +1,395 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Heebo", "Lobster", "Roboto", Sans-serif, Arial;
+}
+
+/* I had to set the padding and margin of the website to 0 therefore everything is correct in position
+ I put a box-sizing: border-box style in there to make sure the width and height of elements are correct
+ I added the font-family that I intend to use to the css */
+
+ /* Below here I style the headers that I will use throughout the content in a specific font "heebo" and I also use "roboto" on the p tags */
+
+h1 {
+    font-family: "Heebo";
+}
+
+h2 {
+    font-family: "Heebo";
+}
+
+p{
+    font-family:"roboto";
+}
+
+/* For the banner page I style the minimum height at 100vh so it doesn't go lower than that
+I also set the background img and cover the entire background using background-size: cover
+so I can get a nice banner going on when customers first land on the website I also add some padding in rem units
+so it can scale easier */
+
+.bannerpage {
+    min-height: 100vh;
+    background: url(../img/background.jpg);
+    background-size: cover;
+    padding: 0rem 5rem;
+}
+/* Again, I set a minimum height for the navigation in 10vh */
+nav {
+    min-height: 10vh;
+}
+/* In the logo class, I float it left so my company is clearly defined
+the logo also has a distinct typography "Lobster" and is the only font that is used specifically for the logo; 
+I set a standard font of Arial incase some other computers don't have that font. 
+For the font-size I set it to 3rem in a larger but more scalable size for different screen widths 
+I also set the color of the logo to white so that it pops out more with the website 
+I added padding to the top to give it some breathing room (25px) */
+.logo {
+    float: left;
+    padding-top: 25px;
+    font-family: "Lobster", Arial;
+    font-size: 3rem;
+    color: white;
+}
+
+/* The Nav links are fun, I floated them to the right away from the logo, and removed the default styling they have on them
+with list-style-type: none. I also add padding so they have spacing between them and from the top, it helped positioning them correctly
+in line with the logo as well */
+
+.nav-links {
+    list-style-type: none;
+    float:right;
+    padding: 45px 15px 0 0;
+}
+
+/* For the nav links it took me a short bit to figure them out,
+but I set them inline so they line up correctly. I set the font-size
+to 1 rem to scale them a lot easier and set the letter spacing to give the text
+a less congested look. I added padding to the right to further push them out to the center of the website
+and I transformed the text to uppercase to give a better aesthetic */
+
+.nav-links li {
+    display: inline;
+    font-size: 1rem;
+    letter-spacing: 0.35rem;
+    padding-right: 50px;
+    text-transform: uppercase;
+}
+
+/* removed the default text styling on them with text-decoration and also made them white */
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* The hover is probably my favorite part, I used the fuchshia pink because it matched my background image really well.
+I also gave it a 0.5s transition so it comes out a lot smoother when you hover over the links. It gave it a really fun feel
+and I enjoyed being a bit more creative with that. This basically set the tone for my submit buttons below as well because they followed
+the same hover color and transition */
+
+.nav-links li a:hover {
+    color: #ff0080;
+    transition: 0.5s;
+}
+
+/* This is a shop now button for customers who are looking to shop for eyewear
+I made the background color white (background-color white) and added black font (color: black)
+I spaced out the text (letter-spacing) to make it a bit more modern as well as centering the text
+with (text-align center), I increased the font-size (font-size) to make it more readable,
+the absolute positioning lets me better center the shop now button within the banner image and I positioned the button
+to my liking with (top 75% and left 45%) I added padding to give it a bit more white space and changed
+the font-family to heebo inconjuction with the rest of the text*/
+
+.bannerbutton {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: "Heebo";
+    letter-spacing: 0.1em;
+    position: absolute;
+    top: 75%;
+    left: 45%;
+}
+/* I used a hover effect over the button as well (button:hover)
+and made it fuchsia colored to mimic the nav bar, that way everything is cohesive and
+I delayed the transition (transition 0.2s) to add a nice smoothness when clicking/hovering over the button*/
+.bannerbutton:hover {
+    color: #ff0080;
+    transition: 0.2s;
+}
+
+/* Code below this will be focused on the content of the company */
+
+/* Added Line height 1.6 em to give the text some breathing room. Centered text text-align center and added padding to all areas */
+
+.mission {
+    text-align: center;
+    padding: 5%;
+    line-height: 1.6em;
+}
+
+/* So this is basically a box div that I wrapped 2 subsequent divs in, I thought it made for a nice section in displaying products. 
+I set the width to 80% of the website so that way it has some breathing room on the side when I position the div to a margin of 0 for the top and auto on the sides,
+it was a better way for letting me center it how I wanted it. I also set the height to 400px to really give it that box feel and made a box-shadow around the div
+to make it pop out more */ 
+
+.box1 {
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    box-shadow: 0 15px 40px rgba(0,0,0,.5);
+}
+
+/* I floated the div leftbox1 to the left, which contained the product photo. I covered the background (background-size cover) of the div with the img glasses1.jpg. 
+I also used the box-sizing: border-box rule to help keep the element consistent with my sizing. I kept the width at 50%, but because the parent div is at 80% that means that
+technically it is 40% of the width of the webpage. I enjoyed this way of centering more so I used a lot of percentages throughout my css */
+
+.box1 .leftbox1{
+    float: left;
+    width: 50%;
+    height: 400px;
+    background: url(../img/glasses1.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+/* This is my favorite part of my box sections because I added the button below as well as the text. Regardless I floated the rightbox1 to the right
+kept it at a width of 50%. I used text-align to center the text in the right box and gave it some breathing room from the top at 5% */
+
+.box1 .rightbox1{
+    float: right;
+    width: 50%;
+    height: 400px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 5%;
+}
+
+/* The button below was a fun touch for me, I kept the background black, set the border to none to remove the default styling, set the text color to white,
+gave it a padding of 15px and 20 px to give it a lot more room inside, centered the text (text-align), increased the fontsize a lot more, used the heebo font-family
+to give it a little bit different of text styling, I also gave it 0.1em in letter-spacing just for stylistic purposes, I didn't want it to feel congested. I also gave 
+a margin top of 2% to separate it out better from the text. Visually it looks more full and better spaced. */
+
+.box1 button{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: "Heebo";
+    letter-spacing: 0.1em;
+    margin-top: 2%;
+}
+
+/* the hover was the fuschia color that I used for the nav, this kept things feeling cohesive throughout the website, and also a transition of 0.2 sec to give it a 
+nice smoothness when hovering over the button. Again my favorite part of the website. */
+
+.box1button:hover{
+    color: #ff0080;
+    transition: 0.2s;
+}
+
+/* This is for box 2 section. See box 1 notes as this is a mimic, the only difference is that i switched the image to the right and the text and button to the left */
+
+.box2 {
+    width: 80%;
+    height: 400px;
+    margin: 10% auto;
+    box-shadow: 0 15px 40px rgba(0,0,0,.5);
+}
+
+.box2 .rightbox2{
+    float: right;
+    width: 50%;
+    height: 400px;
+    background: url(../img/glasses2.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.box2 .leftbox2{
+    float: left;
+    width: 50%;
+    height: 400px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.box2 button{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: "Heebo";
+    letter-spacing: 0.1em;
+    margin-top: 2%;
+}
+
+.box2button:hover{
+    color: #ff0080;
+    transition: 0.2s;
+}
+
+/* For the testimonial figure section. So I thought putting in a testimonials section would be good, it helped me with using some of the tags.
+But again I set a max-width to follow my other sections within the website. Margin of 10% from the top to space out the elements better and auto on the sides
+so that it centers well. I added a margin-bottom of 10% and teext aligned center so that everything was positioned in the center. I liked the website looking like a
+centered piece. I transformed the scale to 1,1; It helped with the images and overall just the figure caption and hr tag, definitely a noticable change. */
+
+.testimonials {
+    max-width:80%;
+    margin: 10% auto;
+    margin-bottom: 10%;
+    text-align: center;
+    transform: scale(1,1);
+}
+
+/* for the image I kept the width at 400px, and height at 400px, the height follows the previous section heights, and the width kind of just made it square; added
+a padding of 4% to the left to better center */
+
+.testimonialpic img {
+    width: 400px;
+    height: 400px;
+    padding-left: 4%;
+}
+
+/* For the Ad Section */
+
+/* I placed a dummy ad placement here incase companies would want to advertise on our website. There is inline css on the html for opacity. 
+I set the width to 600px and 150px for height which is one of the standard banner sizing that way its easier for companies to get an idea of 
+how large their ad would be. the text-align center helped me position, i set a background-color of #d3d3d3 to give it an off gray color,
+added padding so the text would get some breathing room and set the margin at 5% and auto to better center the ad and create some space from the other
+elements. */
+
+.ad  {
+    width: 600px;
+    height: 150px;
+    text-align: center;
+    background-color: #d3d3d3;
+    padding: 0% auto;
+    margin: 5% auto;
+}
+
+/* I added a padding-top of 5% to center the text better within the div, otherwise it appeared too close to the top*/
+.ad h2 {
+    padding-top: 5%;
+}
+
+/* the footer area is pretty straight forward. Centered the text, added a margin of 10% on the top to get some spacing, and set the bottom margin to 0
+because I want the website to feel like it ends at the very bottom. I set the height to 400px to give it a larger footer feel, there should be more items
+that goes into the footer, but for the sake of the project just having my name, year and copyright was all that was needed. So just having the feeling of a footer
+was good enough for me. I set the color of the text to an off white/gray because it didn't stand out too much in the footer as that wasn't a large focus of the website */
+
+footer .footerarea{
+    text-align: center;
+    margin: 10% auto 0 auto;
+    padding-top: 8%;
+    height: 400px;
+    color: #fbfbf8;
+    background-color: #a9a9a9;
+}
+
+/* Begin Product Page Styling */
+
+/* Defined the height of the table with 400px, added text align to the table
+to add a bit more design, Also wanted some breathing room and added a margin of 10% to the top */
+.box1table {
+    height: 400px;
+    text-align: left;
+    margin-top: 10%;
+}
+
+/* Centered the boxtable within the div with margin 0 auto*/
+
+.box1table table {
+    margin: 0 auto;
+}
+
+/* Wanted the title to be in the center of the table (text-align: center)
+    Added padding to the bottom to give a bit more breathing space (padding-bottom: 20px;) */
+
+.box1table .tabletitle {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* Increased the font-size to make it more readable (font-size: 28px) 
+    also added padding to the right 80px (padding-right 80px) to give a little more breathing room to the tables */
+
+.box1table table tr th {
+    font-size: 28px;
+    padding-right: 80px;
+}
+
+/* Added padding to the right of the tables to give a bit more breathing room 
+    also added the font-family roboto to the text to give it a better distinction that those are not titles
+    and set the font to 24px */
+
+.box1table table tr td {
+    font-size: 24px;
+    padding-right: 80px;
+    font-family:'Roboto';
+}
+
+/* Begin Contact Page styling */
+
+/* I gave the div a class of contact us, set the width to 80% to follow the rest of the sections from my home page. 
+I set the height to 800px to give ample space for all the input fields. Added a margin of 10% to the top and bottom to give space between
+the elements and auto to center it correctly. Added a padding-top of 5% to give some breathing room and lower the text just a tad bit. I added a border-radius
+since I thought this would be a good area to put it in, it rounded the corners by 20px and with the box-shadow it really made the entire box pop out.
+I used text-align center to center the text, and set the line height to 2em to give the text some breathing room. */
+
+.contactus {
+    width: 80%;
+    height: 800px;
+    margin: 10% auto;
+    padding-top: 5%;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.5);
+    text-align: center;
+    line-height: 2em;
+}
+
+/* The input field was fun to play with. I wanted the border bottom to appear solid, so I set the orginal border as none. Which gave a cool single line space
+to write the appropriate text in.
+
+But I wanted to show that I understand the initial concept of border-style: solid and didn't know if the shorthand border: 1 px solid black; would be enough to demonstrate
+this as per the instructions to the assignment it says to list all the css properties including border-style from assignment 4. Even though it cancels out, through the order
+of the cascading style sheet, I kept it in there to show that I understand the concept. */
+
+.contactus form input{
+    border-style: solid;
+    border: none;
+    border-bottom: 1px solid;
+    border-width: 1px;
+    border-color: black;
+    outline:none;
+}
+
+/* For the submit button of the contact form, it followed the buttons prior in style and ruling, so everything remains cohesive */
+
+.submitbutton{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: "Heebo";
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* Hover effect remains the same for this button to follow the buttons prior */
+
+.submitbutton:hover{
+    color: #ff0080;
+    transition: 0.2s;
+}
